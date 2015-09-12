@@ -1,19 +1,20 @@
 ## Quick start
 + 后台服务类有对应的方法
 
-```c#
+```C#
 namespace Mysoft.Cbgl.Services
 {
-		public class MonthPlanService
-		{
-				public  string GetWorkflowProcessGUID(string planMonth, string buguid)
+    public class MonthPlanService
+    {
+        public string GetWorkflowProcessGUID(string planMonth, string buguid)
         {
-            string sql=@"select ProcessGUID from myWorkflowProcessEntity where  IsHistory=0 and BusinessGUID in
+            string sql = @"select ProcessGUID from myWorkflowProcessEntity where  IsHistory=0 and BusinessGUID in
                         ( select top 1 MpProcessGUID from  cb_MonthPlan  where planmonth=@0 and buguid=@1)";
             string mpProcessGUID = DBHelper.ExecuteScalarString(sql, planMonth, buguid);
             return mpProcessGUID;
         }
-			}
+    }
+    //more...
 }
 ```
 
@@ -31,5 +32,5 @@ namespace Mysoft.Cbgl.Services
 function doSendProcess() {
 		var mpProcessGUID = MonthPlanService.GetMpProcessGUID($('#__planMonth').val(), $('#txtBUGUID').val());
 		initiateBusinessProcess(mpProcessGUID, '资金计划审批');
-			 }
+	}
 ```

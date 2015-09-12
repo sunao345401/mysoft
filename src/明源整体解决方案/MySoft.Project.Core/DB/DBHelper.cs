@@ -12,8 +12,23 @@ using Mysoft.Project.Core.DataAnnotations;
 using System.ComponentModel;
 using System.Reflection;
 using System.IO;
+namespace Mysoft.Cbgl.Services
+{
+    public class MonthPlanService
+    {
+        public string GetWorkflowProcessGUID(string planMonth, string buguid)
+        {
+            string sql = @"select ProcessGUID from myWorkflowProcessEntity where  IsHistory=0 and BusinessGUID in
+                        ( select top 1 MpProcessGUID from  cb_MonthPlan  where planmonth=@0 and buguid=@1)";
+            string mpProcessGUID = DBHelper.ExecuteScalarString(sql, planMonth, buguid);
+            return mpProcessGUID;
+        }
+    }
+    //more...
+}
 namespace Mysoft.Project.Core
 {
+   
     public static class ConverterExtensions
     {
         static public T ChangeType<T>(this object obj)
