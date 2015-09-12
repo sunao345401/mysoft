@@ -7,7 +7,7 @@
 + [Ajax](docs/api/ajax.md)
 
 
-## Quick start
+## entity
 + 定义后台服务类和方法，（不限语言，没有小平台项目名称约束）
 
 ```C#
