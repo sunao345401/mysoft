@@ -8,38 +8,40 @@
 
 
 ## ajax
-+ 定义后台服务类和方法，（不限语言，没有小平台项目名称约束）
+ajax使用的ajax.aspx作为服务中转地址
 
-```C#
-namespace Mysoft.Cbgl.Services
-{
-    public class MonthPlanService
-    {
-        public string GetWorkflowProcessGUID(string planMonth, string buguid)
-        {
-            string sql = @"select ProcessGUID from myWorkflowProcessEntity where  IsHistory=0 and BusinessGUID in
-                        ( select top 1 MpProcessGUID from  cb_MonthPlan  where planmonth=@0 and buguid=@1)";
-            string mpProcessGUID = DBHelper.ExecuteScalarString(sql, planMonth, buguid);
-            return mpProcessGUID;
-        }
-    }
-    //more...
-}
-```
++ 后端服务方法可以直接传递实体对象，datatable，基础类型，数组等到前端，无须类型转换。
 
-+ 在头部添加jquery和需要调用的后台服务类型
-`<head>`:
-
-```html
-<script type="text/javascript" src="/Project/js/jquery.js" ></script>
-<script type="text/javascript" src="/Project/ajax.aspx?type=Mysoft.Cbgl.Services.MonthPlanService"></script>
-```
-
-+ 在前台脚步调用服务 **注意区分大小写**
++ 前端js调用可以按位置参数传递，也可传递对象，最后一个参数传入函数将使用异步调用
 
 ```javascript
 function doSendProcess() {
-		var mpProcessGUID = MonthPlanService.GetMpProcessGUID($('#__planMonth').val(), $('#txtBUGUID').val());
+  var planMonth=$('#__planMonth').val();
+  var BUGUID=$('#txtBUGUID').val();  
+		var mpProcessGUID = MonthPlanService.GetMpProcessGUID(planMonth,BUGUID);
 		initiateBusinessProcess(mpProcessGUID, '资金计划审批');
 	}
+
+```
+
+```javascript
+function doSendProcess() {
+  var planMonth=$('#__planMonth').val();
+  var BUGUID=$('#txtBUGUID').val();
+		var mpProcessGUID = MonthPlanService.GetMpProcessGUID({planMonth:planMonth,BUGUID: BUGUID});
+		initiateBusinessProcess(mpProcessGUID, '资金计划审批');
+	}
+
+```
+
+```javascript
+function doSendProcess() {
+  var planMonth=$('#__planMonth').val();
+  var BUGUID=$('#txtBUGUID').val();
+	 MonthPlanService.GetMpProcessGUID({planMonth:planMonth,BUGUID: BUGUID},function(mpProcessGUID){
+     	initiateBusinessProcess(mpProcessGUID, '资金计划审批');
+   });
+
+	}
+
 ```

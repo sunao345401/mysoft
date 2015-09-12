@@ -8,38 +8,10 @@
 
 
 ## entity
-+ 定义后台服务类和方法，（不限语言，没有小平台项目名称约束）
+实体类使用的T4模版进行实体类的自动生成
 
-```C#
-namespace Mysoft.Cbgl.Services
-{
-    public class MonthPlanService
-    {
-        public string GetWorkflowProcessGUID(string planMonth, string buguid)
-        {
-            string sql = @"select ProcessGUID from myWorkflowProcessEntity where  IsHistory=0 and BusinessGUID in
-                        ( select top 1 MpProcessGUID from  cb_MonthPlan  where planmonth=@0 and buguid=@1)";
-            string mpProcessGUID = DBHelper.ExecuteScalarString(sql, planMonth, buguid);
-            return mpProcessGUID;
-        }
-    }
-    //more...
-}
-```
+安装dist/lib中的t4toolbox, 将dist/Entity中文件拷贝到需要的项目中（如Mysoft.Cbgl.Entity）
 
-+ 在头部添加jquery和需要调用的后台服务类型(type的完全限定名,包括命名空间),**区分大小写**
-`<head>`:
+编辑BuildAll.tt，指定 数据库连接字符串,所属命名空间,表名数组 ,ctrl+s看效果吧:)
 
-```html
-<script type="text/javascript" src="/Project/js/jquery.js" ></script>
-<script type="text/javascript" src="/Project/ajax.aspx?type=Mysoft.Cbgl.Services.MonthPlanService"></script>
-```
-
-+ 前台脚步调用服务,**区分大小写**
-
-```javascript
-function doSendProcess() {
-		var mpProcessGUID = MonthPlanService.GetMpProcessGUID($('#__planMonth').val(), $('#txtBUGUID').val());
-		initiateBusinessProcess(mpProcessGUID, '资金计划审批');
-	}
-```
+**数据库中的guid类型将转换成string，bool转换为short，如需修改，编辑EntityTemplate.tt中GetFiledType方法**
