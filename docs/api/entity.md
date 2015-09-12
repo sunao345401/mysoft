@@ -27,7 +27,7 @@ namespace Mysoft.Cbgl.Services
 }
 ```
 
-+ 在头部添加jquery和需要调用的后台服务类型
++ 在头部添加jquery和需要调用的后台服务类型(type的完全限定名,包括命名空间),**区分大小写**
 `<head>`:
 
 ```html
@@ -35,7 +35,7 @@ namespace Mysoft.Cbgl.Services
 <script type="text/javascript" src="/Project/ajax.aspx?type=Mysoft.Cbgl.Services.MonthPlanService"></script>
 ```
 
-+ 在前台脚步调用服务 **注意区分大小写**
++ 前台脚步调用服务,**区分大小写**
 
 ```javascript
 function doSendProcess() {
