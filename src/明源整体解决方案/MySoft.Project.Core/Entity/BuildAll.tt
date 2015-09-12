@@ -1,0 +1,25 @@
+<#@ template language="C#v3.5"  hostSpecific="true" debug="true"#>
+<#@ include file="T4Toolbox.tt" #>
+<#@include file="EntityGenerator.tt"#>
+<#
+/*** 
+数据库表名数组
+string[] tableNames=new string[]{
+"ys_YearBudgetVersion"
+,"myUserConfig","myAttentionCompany","myAttentionProject"
+,"myBusinessUnit","p_Project","p_BuildProductType"
+};
+***/
+//表名数组
+string[] tableNames=new string[]{
+
+};
+//连接字符串
+string connectionString = "server=10.5.10.75\\SQL2008R2_BJ;uid=team_bj;pwd=95938;database=erp303sp4_beijing_bjezerp303sp4zz;";
+
+//生成实体所属命名空间
+string ns="Mysoft.BusinessPortal.Entity";  
+EntityGenerator gen=new EntityGenerator(connectionString,ns,tableNames);
+
+gen.Run();
+ #>
