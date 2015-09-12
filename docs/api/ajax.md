@@ -1,13 +1,13 @@
 ## API
 
-+ [Entity](docs/api/entity.md)
++ [Entity](/docs/api/entity.md)
 
-+ [DBHelper](docs/api/dbhelper.md)
++ [DBHelper](/docs/api/dbhelper.md)
 
-+ [Ajax](docs/api/ajax.md)
++ [Ajax](/docs/api/ajax.md)
 
 
-## Quick start
+## ajax
 + 定义后台服务类和方法，（不限语言，没有小平台项目名称约束）
 
 ```C#
