@@ -32,16 +32,16 @@ var list = DBHelper.GetList<cb_MonthPlanDtl>("select * from  cb_MonthPlanDtl  wh
 单一实体查询
 
 ```C#
-var entity = DBHelper.First<cb_MonthPlanDtl>("select * from  cb_MonthPlanDtl  where  MonthPlanGUID in (select MonthPlanGUID from cb_MonthPlan where   planmonth=@0 and buguid=@1) and SBState='已确认'  ", planMonth, buguid);
+List<cb_MonthPlanDtl> entitys = DBHelper.First<cb_MonthPlanDtl>("select * from  cb_MonthPlanDtl  where  MonthPlanGUID in (select MonthPlanGUID from cb_MonthPlan where   planmonth=@0 and buguid=@1) and SBState='已确认'  ", planMonth, buguid);
 //or  
-var entity= DBHelper.GetByID<cb_MonthPlanDtl>(guid) ;
+cb_MonthPlanDtl entity= DBHelper.GetByID<cb_MonthPlanDtl>(guid) ;
 ```
- 
+
 
 + 实体增删改
 可传递对应实体更新或者仅更新特定字段
 ```C#
-          var version = new cb_MonthPlanVersion();
+           cb_MonthPlanVersion version = new cb_MonthPlanVersion();
            version.VersionGUID = Guid.NewGuid().ToString();
            version.PlanMonth = planMonth;
            version.BUGUID = buguid;
@@ -58,5 +58,16 @@ var entity= DBHelper.GetByID<cb_MonthPlanDtl>(guid) ;
 
           var versionName = date.ToString("yyyy年MM月dd日HH:mm:ss") + "版本";
            DBHelper.Update<cb_MonthPlanVersion>({VersionGUID:"",VersionName:versionName});
+
+```
+
++ 开启事务
+
+```C#
+                using (var trans = DBHelper.BeginTransaction())
+                 {
+                     mess = new { result = methodInfo.Invoke(instance, paramters) };
+                     trans.Complete();
+                 }
 
 ```
