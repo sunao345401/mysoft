@@ -8,8 +8,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BusinessPortal</RootNamespace>
-    <AssemblyName>BusinessPortal</AssemblyName>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <SccProjectName>
     </SccProjectName>
@@ -38,27 +38,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CustomControl, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\CustomControl.dll</HintPath>
-    </Reference>
-    <Reference Include="Mysoft.CustomControl, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Mysoft.CustomControl.dll</HintPath>
-    </Reference>
-    <Reference Include="Mysoft.Map.Application.Components, Version=3.0.3.20809, Culture=neutral, PublicKeyToken=1d921b5a6476bf2f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Mysoft.Map.Application.Components.dll</HintPath>
-    </Reference>
-    <Reference Include="Mysoft.Map.Core, Version=3.0.3.20809, Culture=neutral, PublicKeyToken=32e2c7f9e034c152, processorArchitecture=MSIL" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\NPOI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core">

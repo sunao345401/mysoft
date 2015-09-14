@@ -65,6 +65,11 @@
     <Compile Include="DB\DBHelper.cs" />
     <Compile Include="DB\SqlJointer.cs" />
     <Compile Include="DB\TransactionScope.cs" />
+    <Compile Include="Entity\BuildAll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildAll.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
