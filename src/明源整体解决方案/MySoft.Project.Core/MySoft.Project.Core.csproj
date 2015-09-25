@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="NPOI, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -53,13 +54,15 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Toxy, Version=1.6.0.0, Culture=neutral, PublicKeyToken=48d3dbd26ddb59c9, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ajax\AjaxHttpHelper.cs" />
+    <Compile Include="Ajax\AjaxServiceProxy.cs" />
     <Compile Include="Ajax\CommonService.cs" />
     <Compile Include="Ajax\IBusiness.cs" />
     <Compile Include="Ajax\ProxyClass.cs" />
     <Compile Include="Ajax\TypeHelper.cs" />
+    <Compile Include="Ajax\ReflectionHelper.cs" />
     <Compile Include="DB\Database.cs" />
     <Compile Include="DB\DBAttribute.cs" />
     <Compile Include="DB\DBHelper.cs" />
@@ -70,9 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BuildAll.tt</DependentUpon>
     </Compile>
+    <Compile Include="Excel\ExcelHelper.cs" />
+    <Compile Include="Excel\ExcelTemplateParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ajax\AjaxServiceProxy.js" />
     <Content Include="Entity\BuildAll.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BuildAll.cs</LastGenOutput>
@@ -85,7 +91,22 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityTemplate.cs</LastGenOutput>
     </Content>
+    <Content Include="lib\DCSoft.RTF.dll" />
+    <Content Include="lib\dmach.Mail.dll" />
+    <Content Include="lib\DocumentFormat.OpenXml.dll" />
+    <Content Include="lib\HtmlAgilityPack.dll" />
+    <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="lib\itextsharp.dll" />
+    <Content Include="lib\LumenWorks.Framework.IO.dll" />
+    <Content Include="lib\MsgReader.dll" />
     <Content Include="lib\Newtonsoft.Json.dll" />
+    <Content Include="lib\NPOI.dll" />
+    <Content Include="lib\NPOI.OOXML.dll" />
+    <Content Include="lib\NPOI.OpenXml4Net.dll" />
+    <Content Include="lib\NPOI.OpenXmlFormats.dll" />
+    <Content Include="lib\NPOI.ScratchPad.HWPF.dll" />
+    <Content Include="lib\NPOI.xml" />
+    <Content Include="lib\Toxy.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />

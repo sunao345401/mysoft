@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Mysoft.Project.Core;
 namespace Mysoft.Project.Expand
 {
   public  class CommonService
@@ -11,7 +11,7 @@ namespace Mysoft.Project.Expand
       {
           string sql = @"select ProcessGUID from myWorkflowProcessEntity
 WHERE BusinessGUID=@BusinessGUID AND BusinessType=@BusinessType  AND ISNULL(IsHistory,0) = 0";
-          return Mysoft.Project.Core.DBHelper.ExecuteScalarString(sql, new { BusinessGUID = BusinessGUID, BusinessType = BusinessType });
+          return DBHelper.ExecuteScalarString(sql, new { BusinessGUID = BusinessGUID, BusinessType = BusinessType });
 
 
       }

@@ -25,10 +25,12 @@ DBHelper是数据库访问层，执行sql或实体操作
 + 实体查询
 
 列表查询
+
 ```C#
 var list = DBHelper.GetList<cb_MonthPlanDtl>("select * from  cb_MonthPlanDtl  where  MonthPlanGUID in (select MonthPlanGUID from cb_MonthPlan where   planmonth=@0 and buguid=@1) and SBState='已确认'  ", planMonth, buguid);
 
 ```
+
 单一实体查询
 
 ```C#
@@ -39,7 +41,7 @@ cb_MonthPlanDtl entity= DBHelper.GetByID<cb_MonthPlanDtl>(guid) ;
 
 
 + 实体增删改
-可传递对应实体更新或者仅更新特定字段
+实体更新
 ```C#
            cb_MonthPlanVersion version = new cb_MonthPlanVersion();
            version.VersionGUID = Guid.NewGuid().ToString();
@@ -53,6 +55,8 @@ cb_MonthPlanDtl entity= DBHelper.GetByID<cb_MonthPlanDtl>(guid) ;
 
 ```
 
+更新特定字段
+
 
 ```C#
 
@@ -60,6 +64,7 @@ cb_MonthPlanDtl entity= DBHelper.GetByID<cb_MonthPlanDtl>(guid) ;
            DBHelper.Update<cb_MonthPlanVersion>({VersionGUID:"",VersionName:versionName});
 
 ```
+
 
 + 开启事务
 
