@@ -1,4 +1,3 @@
-
 /*特别说明：提供两种返回方式。  
 返回数据集，用于在.net代码访问结果集，需要其它存储过程包装，例如usp_myProjFilterBaseDT  
 返回游标，用于在存储过程直接访问结果集，例如usp_myContractFilter  
