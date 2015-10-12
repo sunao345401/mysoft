@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Ôªø/*ÁâπÂà´ËØ¥ÊòéÔºöÊèê‰æõ‰∏§ÁßçËøîÂõûÊñπÂºè„ÄÇ  
 ËøîÂõûÊï∞ÊçÆÈõÜÔºåÁî®‰∫éÂú®.net‰ª£Á†ÅËÆøÈóÆÁªìÊûúÈõÜÔºåÈúÄË¶ÅÂÖ∂ÂÆÉÂ≠òÂÇ®ËøáÁ®ãÂåÖË£ÖÔºå‰æãÂ¶Çusp_myProjFilterBaseDT  
 ËøîÂõûÊ∏∏Ê†áÔºåÁî®‰∫éÂú®Â≠òÂÇ®ËøáÁ®ãÁõ¥Êé•ËÆøÈóÆÁªìÊûúÈõÜÔºå‰æãÂ¶Çusp_myContractFilter  
@@ -12,6 +13,23 @@
 --  @blnisUserFilter ÊòØÂê¶Âè†Âä†Áî®Êà∑Ëá™Â∑±ÂÆö‰πâÁöÑÈ°πÁõÆËøáÊª§  
 --  @chvResultType  ËøîÂõûÁ±ªÂûã„ÄÇ‚Äútable‚ÄùÔºàËøîÂõûÊï∞ÊçÆÈõÜÔºâ„ÄÅ‚Äúcursor‚ÄùÔºàËøîÂõûÊ∏∏Ê†áÔºâ  
 --  @curResult   ËøîÂõûÁöÑÊ∏∏Ê†á  
+=======
+
+/*Ãÿ±Àµ√˜£∫Ã·π©¡Ω÷÷∑µªÿ∑Ω Ω°£  
+∑µªÿ ˝æ›ºØ£¨”√”⁄‘⁄.net¥˙¬Î∑√Œ Ω·π˚ºØ£¨–Ë“™∆‰À¸¥Ê¥¢π˝≥Ã∞¸◊∞£¨¿˝»Áusp_myProjFilterBaseDT  
+∑µªÿ”Œ±Í£¨”√”⁄‘⁄¥Ê¥¢π˝≥Ã÷±Ω”∑√Œ Ω·π˚ºØ£¨¿˝»Áusp_myContractFilter  
+‘≠“Ú£∫¥Ê¥¢π˝≥Ã≤ª‘ –Ìinert into exec«∂Ã◊ π”√£¨.net≤ªƒ‹µ˜”√¥¯”Œ±Í ‰≥ˆµƒ¥Ê¥¢π˝≥Ã  
+*/  
+  
+--π¶ƒ‹£∫ªÒ»°”√ªßµƒœÓƒøπ˝¬ÀΩ·π˚ºØ  
+--≤Œ ˝£∫  
+--  @chvUserGUID  µ±«∞”√ªßµƒGUID  
+--  @chvApplication  ”¶”√œµÕ≥¥˙¬Î  
+--  @chvBUGUID   π´ÀæGUID£¨»Áπ˚Œ™ø’‘Ú≤ªº”π´Àæπ˝¬À  
+--  @blnisUserFilter  «∑Òµ˛º””√ªß◊‘º∫∂®“ÂµƒœÓƒøπ˝¬À  
+--  @chvResultType  ∑µªÿ¿‡–Õ°£°∞table°±£®∑µªÿ ˝æ›ºØ£©°¢°∞cursor°±£®∑µªÿ”Œ±Í£©  
+--  @curResult   ∑µªÿµƒ”Œ±Í  
+>>>>>>> origin/ddtree
 ALTER   PROCEDURE [dbo].[usp_myProjFilterBase]  
     (  
       @chvUserGUID NVARCHAR(40) ,  
@@ -42,16 +60,26 @@ END
     SET @chvApplication = REPLACE(@chvApplication, '''', '''''')              
  --SET @chvErrorInfo = ''  
   
+<<<<<<< HEAD
  --1„ÄÅËé∑ÂèñÂéüÂßãÁöÑÈ°πÁõÆÊùÉÈôêÈõÜÂêà  
  --#dtAllObject ÊâÄÊúâÊï∞ÊçÆÂØπË±°  
  --#dtUO   ÂΩìÂâçÁî®Êà∑Â∑≤ÊúâÁöÑÊï∞ÊçÆÂØπË±°ÊùÉÈôê  
+=======
+ --1°¢ªÒ»°‘≠ ºµƒœÓƒø»®œﬁºØ∫œ  
+ --#dtAllObject À˘”– ˝æ›∂‘œÛ  
+ --#dtUO   µ±«∞”√ªß“—”–µƒ ˝æ›∂‘œÛ»®œﬁ  
+>>>>>>> origin/ddtree
    
     DECLARE @chvSQL VARCHAR(8000) ,  
         @chvFilt VARCHAR(MAX) ,  
         @bIsAdmin BIT              
   
    
+<<<<<<< HEAD
     --Âä†ËΩΩÊéàÊùÉÂØπË±°ÂÆö‰πâ  
+=======
+    --º”‘ÿ ⁄»®∂‘œÛ∂®“Â  
+>>>>>>> origin/ddtree
     DECLARE @chvXML NVARCHAR(4000) ,  
         @hDoc INT ,  
         @chvXPath VARCHAR(200) ,  
@@ -71,22 +99,38 @@ END
     
     IF @@ROWCOUNT = 0   
         BEGIN  
+<<<<<<< HEAD
    --SET @chvErrorInfo = 'id‰∏∫‚Äúproject‚ÄùÁöÑÊï∞ÊçÆÂØπË±°Ê≤°ÊúâÂÆö‰πâÔºÅ'  
             GOTO RETURN_NULL  
         END  
   
     --Ëé∑ÂèñÊï∞ÊçÆÊ∫êÔºåÁõÆÂâçÂè™ÊîØÊåÅ SQL  
+=======
+   --SET @chvErrorInfo = 'idŒ™°∞project°±µƒ ˝æ›∂‘œÛ√ª”–∂®“Â£°'  
+            GOTO RETURN_NULL  
+        END  
+  
+    --ªÒ»° ˝æ›‘¥£¨ƒø«∞÷ª÷ß≥÷ SQL  
+>>>>>>> origin/ddtree
     IF @chvDataType = 'SQL'   
         BEGIN  
             SET @chvDataSource = @chvDataSource  
         END  
     ELSE   
         BEGIN  
+<<<<<<< HEAD
    --SET @chvErrorInfo = 'id‰∏∫‚Äúproject‚ÄùÁöÑÊï∞ÊçÆÂØπË±°ÂÆö‰πâÈîôËØØÔºÅ'  
             GOTO RETURN_NULL  
         END  
     
  --ÂàõÂª∫#dtAllObjectÔºàÊâÄÊúâÊï∞ÊçÆÂØπË±°Ôºâ‰∏¥Êó∂Ë°®  
+=======
+   --SET @chvErrorInfo = 'idŒ™°∞project°±µƒ ˝æ›∂‘œÛ∂®“Â¥ÌŒÛ£°'  
+            GOTO RETURN_NULL  
+        END  
+    
+ --¥¥Ω®#dtAllObject£®À˘”– ˝æ›∂‘œÛ£©¡Ÿ ±±Ì  
+>>>>>>> origin/ddtree
     CREATE TABLE #dtAllObject  
         (  
           _guid UNIQUEIDENTIFIER ,  
@@ -100,7 +144,11 @@ END
           _isallowopr VARCHAR(1) DEFAULT '0'  
         )  
    
+<<<<<<< HEAD
  --Â≠òÂÇ®ËøáÁ®ã‰∏≠Êó†Ê≥ïÂÆûÊó∂‰øÆÊîπË°®ÁªìÊûÑ   
+=======
+ --¥Ê¥¢π˝≥Ã÷–Œﬁ∑® µ ±–ﬁ∏ƒ±ÌΩ·ππ   
+>>>>>>> origin/ddtree
     INSERT  INTO #dtAllObject  
             ( _guid ,  
               _name ,  
@@ -115,6 +163,7 @@ END
    
     SELECT  @bIsAdmin = IsAdmin  
     FROM    myUser  
+<<<<<<< HEAD
     WHERE   UserGUID = @chvUserGUID --ÊòØÂê¶ÁÆ°ÁêÜÂëòÔºà1ÔºöÊòØ„ÄÅ0ÔºöÂê¶Ôºâ   
   
   
@@ -122,12 +171,25 @@ END
     IF @bIsAdmin = 1   
         BEGIN  
    --ÁÆ°ÁêÜÂëòÔºåÊã•ÊúâÊâÄÊúâÁöÑÊï∞ÊçÆÊùÉÈôê  
+=======
+    WHERE   UserGUID = @chvUserGUID -- «∑Òπ‹¿Ì‘±£®1£∫ «°¢0£∫∑Ò£©   
+  
+  
+ --∏˘æ›”√ªßµƒ»®œﬁΩ¯––π˝¬À  
+    IF @bIsAdmin = 1   
+        BEGIN  
+   --π‹¿Ì‘±£¨”µ”–À˘”–µƒ ˝æ›»®œﬁ  
+>>>>>>> origin/ddtree
             UPDATE  #dtAllObject  
             SET     _isallowopr = 1   
         END  
     ELSE   
         BEGIN  
+<<<<<<< HEAD
    --ÊôÆÈÄöÁî®Êà∑ÔºåÂè™ËÉΩÊéàÂ∑≤ÊúâÁöÑÊï∞ÊçÆÊùÉÈôê     
+=======
+   --∆’Õ®”√ªß£¨÷ªƒ‹ ⁄“—”–µƒ ˝æ›»®œﬁ     
+>>>>>>> origin/ddtree
             SELECT  *  
             INTO    #dtUO  
             FROM    (   
@@ -142,9 +204,15 @@ END
                                 AND UserGUID = @chvUserGUID  
                     ) a  
      
+<<<<<<< HEAD
             IF @@ROWCOUNT > 0    --myUserObjectÂèØËÉΩÂ≠òÂú®ÂûÉÂúæÊï∞ÊçÆ  
                 BEGIN  
      --Êú¨Á∫ßÂèä‰∏ãÁ∫ß  
+=======
+            IF @@ROWCOUNT > 0    --myUserObjectø…ƒ‹¥Ê‘⁄¿¨ª¯ ˝æ›  
+                BEGIN  
+     --±æº∂º∞œ¬º∂  
+>>>>>>> origin/ddtree
                     UPDATE  a  
                     SET     a._isallowopr = 1  
                     FROM    #dtAllObject a  
@@ -156,7 +224,11 @@ END
         END  
   
 
+<<<<<<< HEAD
    --Ê†πÊçÆDataRightsDTTypeÁ±ªÂûãËøõË°åËøáÊª§  
+=======
+   --∏˘æ›DataRightsDTType¿‡–ÕΩ¯––π˝¬À  
+>>>>>>> origin/ddtree
     SET @chvFilt = ''  
 	
 	Create table #tmpBUGUID
@@ -165,7 +237,11 @@ END
 	)
 
     IF @bIsAdmin = 1  
+<<<<<<< HEAD
         --Â¶ÇÊûúÊòØÁÆ°ÁêÜÂëòÔºåÂè™Âá∫Áî®Êà∑ÊâÄÂ±ûÂÖ¨Âè∏ÁöÑ Deep ÊùÉÈôêÔºå‰∏çËÄÉËôëDataRightsDTType„ÄÇ  
+=======
+        --»Áπ˚ «π‹¿Ì‘±£¨÷ª≥ˆ”√ªßÀ˘ Ùπ´Àæµƒ Deep »®œﬁ£¨≤ªøº¬«DataRightsDTType°£  
+>>>>>>> origin/ddtree
         BEGIN  
             Insert Into #tmpBUGUID(BUGUID)
             SELECT    BUGUID  
@@ -205,10 +281,17 @@ END
             IF LEN(@guid) >= 2   
                 SELECT  @guid = SUBSTRING(@guid, 1, LEN(@guid) - 2)        
             ELSE  
+<<<<<<< HEAD
 				--Èöè‰æø‰∏Ä‰∏™GUID,ÈÅøÂÖçÊä•Èîô  
                 SET @guid = '''A9FB9CB3-5A7C-41F9-8518-31494E56243C'''   
 			
 			--Â¶ÇÊûúÊòØÁÆ°ÁêÜÂëòÔºåÂè™Âá∫Áî®Êà∑ÊâÄÂ±ûÂÖ¨Âè∏ÁöÑ Deep ÊùÉÈôêÔºå‰∏çËÄÉËôëDataRightsDTType„ÄÇ  
+=======
+				--ÀÊ±„“ª∏ˆGUID,±‹√‚±®¥Ì  
+                SET @guid = '''A9FB9CB3-5A7C-41F9-8518-31494E56243C'''   
+			
+			--»Áπ˚ «π‹¿Ì‘±£¨÷ª≥ˆ”√ªßÀ˘ Ùπ´Àæµƒ Deep »®œﬁ£¨≤ªøº¬«DataRightsDTType°£  
+>>>>>>> origin/ddtree
             SET @chvFilt = '_buguid not in (' + @guid + ')'  
             */
             SET @chvFilt ='_buguid not in(SELECT BUGUID FROM #tmpBUGUID)'
@@ -218,21 +301,37 @@ END
             SET @chvFilt = '_isallowopr = ''0'''  
         END  
  
+<<<<<<< HEAD
  --Â¶ÇÊûúÈùûÂÆ¢ÊúçÁ≥ªÁªü(0102)ÔºåÈúÄË¶ÅËøáÊª§ÊéâÂÖ±‰∫´È°πÁõÆÊï∞ÊçÆ      
+=======
+ --»Áπ˚∑«øÕ∑˛œµÕ≥(0102)£¨–Ë“™π˝¬ÀµÙπ≤œÌœÓƒø ˝æ›      
+>>>>>>> origin/ddtree
     IF @chvApplication <> ''  
         AND @chvApplication <> '0102'   
         SET @chvFilt = @chvFilt + ' OR _isshare=1'   
    
+<<<<<<< HEAD
  --Ê†πÊçÆÊï∞ÊçÆÁ±ªÂûãËøáÊª§  
    SET @chvFilt = @chvFilt + ' OR _sourcetype <> ''È°πÁõÆ'''  
   
 	--Âà†Èô§‰ª•‰∏äÊù°‰ª∂ÊâÄËøáÊª§ÁöÑËÆ∞ÂΩï 
+=======
+ --∏˘æ› ˝æ›¿‡–Õπ˝¬À  
+   SET @chvFilt = @chvFilt + ' OR _sourcetype <> ''œÓƒø'''  
+  
+	--…æ≥˝“‘…œÃıº˛À˘π˝¬Àµƒº«¬º 
+>>>>>>> origin/ddtree
 	SET @chvSQL = 'DELETE #dtAllObject WHERE ' + @chvFilt  
     
     EXEC (@chvSQL)  
    
+<<<<<<< HEAD
  --2„ÄÅÂØπÂéüÂßãÁöÑÈ°πÁõÆÊùÉÈôêÈõÜÂêàËøõË°åËøáÊª§  
  --Âä†ÂÖ¨Âè∏ËøáÊª§  
+=======
+ --2°¢∂‘‘≠ ºµƒœÓƒø»®œﬁºØ∫œΩ¯––π˝¬À  
+ --º”π´Àæπ˝¬À  
+>>>>>>> origin/ddtree
     IF @chvBUGUID <> ''   
         DELETE  #dtAllObject  
         WHERE _buguid NOT IN (SELECT BUGUID FROM dbo.myBusinessUnit WHERE ParentGUID =@chvBUGUID OR BUGUID =@chvBUGUID)
@@ -252,7 +351,11 @@ END
     WHERE   1 = 2   
     
     
+<<<<<<< HEAD
  --Â¶ÇÊûúÂêØÁî®ÁöÑ‚ÄúÈ°πÁõÆÂ≠êÁ≥ªÁªüËøáÊª§‚ÄùÔºåÂàôÈúÄË¶ÅËøáÊª§ÂΩìÂâçÁ≥ªÁªü‰∏çÂèØÁî®ÁöÑÈ°πÁõÆ  
+=======
+ --»Áπ˚∆Ù”√µƒ°∞œÓƒø◊”œµÕ≥π˝¬À°±£¨‘Ú–Ë“™π˝¬Àµ±«∞œµÕ≥≤ªø…”√µƒœÓƒø  
+>>>>>>> origin/ddtree
     IF EXISTS ( SELECT  1  
                 FROM    myApplication  
                 WHERE   ISNULL(IsApplySys, 0) = 1  
@@ -341,7 +444,11 @@ END
         END  
    
    
+<<<<<<< HEAD
  --Âè†Âä†Áî®Êà∑Ëá™Â∑±ÂÆö‰πâÁöÑÈ°πÁõÆËøáÊª§  
+=======
+ --µ˛º””√ªß◊‘º∫∂®“ÂµƒœÓƒøπ˝¬À  
+>>>>>>> origin/ddtree
     IF @blnisUserFilter = 1  
         AND EXISTS ( SELECT 1  
                      FROM   myUser  
@@ -378,27 +485,43 @@ END
         END  
   
   
+<<<<<<< HEAD
  --ÊàêÂäü:ËæìÂá∫ÁªìÊûúÈõÜ  
+=======
+ --≥…π¶: ‰≥ˆΩ·π˚ºØ  
+>>>>>>> origin/ddtree
     DROP TABLE #Temp  
     EXEC sp_xml_removedocument @hDoc  
   
     SET NOCOUNT OFF  
     IF @chvResultType = 'table'   
         BEGIN  
+<<<<<<< HEAD
    --ËøîÂõûÁªìÊûúÈõÜ  
+=======
+   --∑µªÿΩ·π˚ºØ  
+>>>>>>> origin/ddtree
             SELECT  ProjGUID  
             FROM    #dtDataRights  
         END  
     ELSE   
         BEGIN  
+<<<<<<< HEAD
    --ËæìÂá∫Ê∏∏Ê†á  
+=======
+   -- ‰≥ˆ”Œ±Í  
+>>>>>>> origin/ddtree
             SET @curResult = CURSOR FORWARD_ONLY STATIC FOR   
     SELECT ProjGUID FROM #dtDataRights  
             OPEN @curResult  
         END  
     RETURN 1  
    
+<<<<<<< HEAD
  --Â§±Ë¥•:ËøîÂõûÁ©∫Êï∞ÊçÆÈõÜ  
+=======
+ -- ß∞‹:∑µªÿø’ ˝æ›ºØ  
+>>>>>>> origin/ddtree
     RETURN_NULL:  
     IF NOT OBJECT_ID('tempdb..#b') IS NULL   
         DROP TABLE #Temp  
@@ -408,13 +531,21 @@ END
     SET NOCOUNT OFF  
     IF @chvResultType = 'table'   
         BEGIN  
+<<<<<<< HEAD
    --ËøîÂõûÁªìÊûúÈõÜ  
+=======
+   --∑µªÿΩ·π˚ºØ  
+>>>>>>> origin/ddtree
             SELECT  NULL AS ProjGUID  
             WHERE   1 = 2  
         END  
     ELSE   
         BEGIN  
+<<<<<<< HEAD
    --ËæìÂá∫Ê∏∏Ê†á  
+=======
+   -- ‰≥ˆ”Œ±Í  
+>>>>>>> origin/ddtree
             SET @curResult = CURSOR FORWARD_ONLY STATIC FOR   
     SELECT NULL AS ProjGUID WHERE 1=2  
             OPEN @curResult  
